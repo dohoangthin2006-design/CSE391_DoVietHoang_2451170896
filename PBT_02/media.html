@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trang giới thiệu sản phẩm có multimedia</title>
+  </head>
+  <body>
+    <figure>
+      <img
+        src="https://cms-i.autodaily.vn/du-lieu/2016/10/10/C250%20Exclusive/mercedes-benz-c250-2.jpg"
+        alt="Sản phẩm 1"
+        loading="lazy"
+        style="max-width: 100%; height: auto"
+      />
+      <figcaption>Mercedes C 250 Exclusive</figcaption>
+    </figure>
+
+    <figure>
+      <img
+        src="https://mercedesbenz.hanoi.vn/wp-content/uploads/2019/04/z4092984486311_acc95699e590d17cc345a02561581a4a.jpg"
+        alt="Sản phẩm 2"
+        loading="lazy"
+        style="max-width: 100%; height: auto"
+      />
+      <figcaption>Maybach S450 4MATIC</figcaption>
+    </figure>
+
+    <figure>
+      <img
+        src="https://i1-vnexpress.vnecdn.net/2021/09/19/7A5A4612-JPG.jpg?w=2400&h=0&q=100&dpr=1&fit=crop&s=DJrx_e_DzDfdExkktJZfaA&t=image"
+        alt="Sản phẩm 3"
+        loading="lazy"
+        style="max-width: 100%; height: auto"
+      />
+      <figcaption>Audi A7 Sportback</figcaption>
+    </figure>
+
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+      loading="lazy"
+      allow="
+        accelerometer;
+        autoplay;
+        clipboard-write;
+        encrypted-media;
+        gyroscope;
+        picture-in-picture;
+      "
+      allowfullscreen
+    ></iframe>
+
+    <!-- Video local -->
+    <h2>Video sản phẩm</h2>
+
+    <video
+      controls
+      poster="poster.jpg"
+      width="600"
+      style="max-width: 100%; height: auto"
+    >
+      <source src="demo.mp4" type="video/mp4" />
+      <source src="demo.webm" type="video/webm" />
+
+      Trình duyệt không hỗ trợ video.
+    </video>
+
+    <!-- Audio -->
+    <h2>Nhạc nền</h2>
+
+    <audio controls>
+      <source src="background.mp3" type="audio/mpeg" />
+      <source src="background.ogg" type="audio/ogg" />
+
+      Trình duyệt không hỗ trợ audio.
+    </audio>
+
+    <!-- SVG inline -->
+    <h2>Logo SVG</h2>
+
+    <svg width="120" height="120">
+      <circle cx="60" cy="60" r="50" fill="blue" />
+      <text x="40" y="67" fill="white" font-size="20">CAR</text>
+    </svg>
+  </body>
+</html>
