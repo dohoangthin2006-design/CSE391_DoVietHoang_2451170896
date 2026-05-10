@@ -212,3 +212,4 @@ Kiểm tra độ mạnh mật khẩu phức tạp
 - Hacker gửi request giả trực tiếp tới server
   → Vì frontend validation có thể bị bỏ qua hoàn toàn
   → Dẫn tới rủi ro bảo mật và dữ liệu không hợp lệ
+Video OBS: https://youtu.be/C3Tjjb1sjBs
