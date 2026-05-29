@@ -1,0 +1,30 @@
+p {
+  color: gray;
+} /* 0,0,1 */
+.text {
+  color: blue;
+} /* 0,1,0 */
+.highlight {
+  color: orange;
+} /* 0,1,0 — đến sau nên thắng .text */
+p.text {
+  color: green;
+} /* 0,1,1 */
+.text.highlight {
+  color: violet;
+} /* 0,2,0 */
+p.text.highlight {
+  color: pink;
+} /* 0,2,1 */
+#demo {
+  color: red;
+} /* 1,0,0 */
+#demo.text {
+  color: darkorange;
+} /* 1,1,0 */
+p#demo.text.highlight {
+  color: teal;
+} /* 1,2,1 — cao nhất không có !important */
+p {
+  color: gold !important;
+}
