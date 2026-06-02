@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form đăng ký tài khoản E-Commerce</title>
+  </head>
+  <body>
+    <form action="#" method="POST">
+      <fieldset>
+        <legend>Thông tin cá nhân</legend>
+        <label for="fullname">Họ tên:</label>
+        <input
+          type="text"
+          id="fullname"
+          name="fullname"
+          minlength="2"
+          maxlength="50"
+          placeholder="Nhập họ tên"
+          required
+        />
+
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Nhập email"
+          required
+        />
+
+        <label for="phone">Số điện thoại:</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          pattern="[0-9]{10}"
+          placeholder="Nhập số điện thoại"
+          required
+        />
+
+        <label for="birthdate">Ngày sinh:</label>
+        <input
+          type="date"
+          id="birthdate"
+          name="birthdate"
+          max="2026-5-10"
+          placeholder="Chọn ngày sinh"
+          required
+        />
+      </fieldset>
+
+      <fieldset>
+        <legend>Tài khoản</legend>
+
+        <label for="username">Username:</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          pattern="[a-zA-Z0-9_]{3,20}"
+          title="Username phải từ 3-20 ký tự, chỉ chứa chữ cái, số và dấu gạch dưới"
+          placeholder="username_123"
+          required
+        />
+
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          minlenght="8"
+          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+          title="Password phải có ít nhất 8 ký tự, bao gồm chữ hoa, chữ thường và số"
+          placeholder="Nhập mật khẩu"
+          required
+        />
+
+        <label for="confirm_password">Xác nhận password:</label>
+        <input
+          type="password"
+          id="confirm_password"
+          name="confirm_password"
+          minlength="8"
+          pattern="(?=.*[A-Z])(?=.*[0-9]).{8,}"
+          placeholder="Xác nhận password"
+          title="Ít nhất 8 ký tự, 1 chữ hoa và 1 số"
+          required
+        />
+      </fieldset>
+
+      <fieldset>
+        <legend>Thông tin giao hàng</legend>
+
+        <label for="city">Thành phố:</label>
+        <select id="city" name="city" required>
+          <option value="">Chọn thành phố</option>
+          <option value="hanoi">Hà Nội</option>
+          <option value="hcm">Hồ Chí Minh</option>
+          <option value="danang">Đà Nẵng</option>
+          <option value="hue">Huế</option>
+          <option value="cantho">Cần Thơ</option>
+        </select>
+
+        <label for="district">Quận/Huyện:</label>
+        <select id="district" name="district" required>
+          <option value="">Chọn quận/huyện</option>
+          <option value="district1">Quận 1</option>
+          <option value="district2">Quận 2</option>
+          <option value="district3">Quận Hà Đông</option>
+        </select>
+
+        <label for="address">Địa chỉ chi tiết:</label>
+        <textarea
+          name="address"
+          id="address"
+          rows="3"
+          placeholder="Nhập địa chỉ chi tiết"
+        ></textarea>
+
+        <label>Giới tính</label>
+        <label>
+          <input type="radio" name="gender" value="male" required /> Nam
+        </label>
+
+        <label>
+          <input type="radio" name="gender" value="female" required /> Nữ
+        </label>
+
+        <label>
+          <input type="radio" name="gender" value="other" required /> Khác
+        </label>
+      </fieldset>
+
+      <label for="agree">
+        <input type="checkbox" id="agree" name="agree" required /> Tôi đồng ý
+        với các điều khoản và chính sách bảo mật
+      </label>
+
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+    </form>
+  </body>
+</html>

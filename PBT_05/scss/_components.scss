@@ -1,0 +1,206 @@
+
+   * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: $font-primary;
+    font-size: $font-size-sm;
+    line-height: 1.5;
+    background-color: $color-bg-body;
+    color: $color-text-main;
+
+    @include respond-to(tablet) {
+        font-size: $font-size-md;
+    }
+    @include respond-to(desktop) {
+        font-size: $font-size-lg;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.header {
+    background-color: $color-header-bg;
+    color: $color-text-main;
+    padding: $spacing-md;
+    position: relative;
+    @include flex-center;
+
+    .logo {
+        font-size: 1.25rem;
+        font-weight: bold;
+    }
+
+    .menu {
+        background: none;
+        border: none;
+        color: $color-text-main;
+        font-size: 1.5rem;
+        cursor: pointer;
+        display: block;
+
+        @include respond-to(tablet) {
+            display: none;
+        }
+    }
+}
+
+.nav-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: $color-nav-bg;
+    z-index: 1000;
+
+    &.active {
+        display: block;
+    }
+
+    ul {
+        list-style: none;
+
+        li a {
+            display: block;
+            padding: 12px 20px;
+            color: $color-nav-link;
+            text-decoration: none;
+            border-bottom: 1px solid $color-nav-border;
+
+            @include respond-to(tablet) {
+                padding: 0;
+                border-bottom: none;
+            }
+        }
+
+        @include respond-to(tablet) {
+            display: flex;
+            gap: 20px;
+        }
+    }
+
+    @include respond-to(tablet) {
+        display: block;
+        position: static;
+        width: auto;
+        background: none;
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: $spacing-md;
+    gap: $spacing-md;
+
+    @include respond-to(desktop) {
+        display: grid;
+        grid-template-columns: 200px 1fr 200px;
+        align-items: start;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: $spacing-lg;
+        gap: $spacing-lg;
+    }
+}
+
+.sidebar {
+    display: none;
+
+    @include respond-to(tablet) {
+        display: block;
+        background: $color-text-light;
+        padding: $spacing-md;
+        border-radius: 6px;
+    }
+
+    @include respond-to(desktop) {
+        padding: $spacing-lg;
+    }
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    select {
+        padding: 6px 12px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+
+        @include respond-to(desktop) {
+            width: 100%;
+            margin-top: 5px;
+        }
+    }
+
+    @include respond-to(desktop) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $spacing-md;
+
+    @include respond-to(tablet) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @include respond-to(desktop) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.products-card {
+    background: $color-text-light;
+    border-radius: 6px;
+    overflow: hidden;
+    @include card-shadow;
+
+    .products-info {
+        padding: 12px;
+    }
+
+    .products-name {
+        font-size: 1rem;
+        margin-bottom: $spacing-sm;
+    }
+
+    .products-price {
+        color: $color-price;
+        font-weight: bold;
+    }
+}
+
+.ads-bar {
+    display: none;
+
+    @include respond-to(desktop) {
+        display: block;
+        background: $color-ads-bg;
+        padding: $spacing-lg;
+        border-radius: 6px;
+        text-align: center;
+        font-weight: bold;
+        min-height: 200px;
+    }
+}
+
+.footer {
+    background-color: $color-footer-bg;
+    color: $color-text-light;
+    text-align: center;
+    padding: $spacing-md;
+    margin-top: 20px;
+}

@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: black;
+  color: white;
+  padding: 20px;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  color: blue;
+  text-decoration: underline;
+}
+
+.auth {
+  display: flex;
+  gap: 10px;
+}
+
+.auth button {
+  padding: 10px 20px;
+}
+.auth button:hover {
+  background: blue;
+  color: white;
+}
+
+.products-title {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  flex: 0 0 calc(25% - 20px);
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.card-content button {
+  margin-top: auto;
+  padding: 10px;
+}
