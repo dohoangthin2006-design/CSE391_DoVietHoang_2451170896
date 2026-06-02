@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TechStore - Landing Page</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
+    />
+    <style>
+      .card-img-top {
+        height: 200px;
+        object-fit: cover;
+      }
+      .badge-sale {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 5;
+      }
+      .card-container {
+        position: relative;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="#">
+          <i class="bi bi-shop"></i> TechStore
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Trang chủ</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Sản phẩm</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Liên hệ</a></li>
+          </ul>
+          <button class="btn btn-outline-light ms-3 position-relative">
+            <i class="bi bi-cart3"></i> Giỏ hàng
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="bg-light py-5">
+      <div class="container text-center">
+        <h1 class="display-4 fw-bold mb-3">Khám phá công nghệ mới</h1>
+        <p class="lead mb-4">Sản phẩm chất lượng cao với giá tốt nhất</p>
+        <button class="btn btn-danger btn-lg">Mua ngay</button>
+      </div>
+    </section>
+
+    <!-- ===== PRODUCTS ===== -->
+    <section class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-5 fw-bold">Sản phẩm nổi bật</h2>
+
+        <div class="row g-4">
+          <!-- Product 1 -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card card-container shadow-sm h-100">
+              <div class="badge bg-danger badge-sale">Sale</div>
+              <img
+                src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300&h=200&fit=crop"
+                class="card-img-top"
+                alt="Product"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Headphone Premium</h5>
+                <p class="card-text text-muted small">Âm thanh sống động</p>
+                <div
+                  class="d-flex justify-content-between align-items-center mb-3"
+                >
+                  <span class="h6 mb-0"
+                    ><del class="text-muted">599K</del>
+                    <span class="text-danger">399K</span></span
+                  >
+                  <div class="text-warning">
+                    <i class="bi bi-star-fill"></i> 4.5
+                  </div>
+                </div>
+                <button
+                  class="btn btn-primary btn-sm w-100"
+                  data-bs-toggle="modal"
+                  data-bs-target="#productModal"
+                >
+                  Xem nhanh
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card card-container shadow-sm h-100">
+              <img
+                src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=300&h=200&fit=crop"
+                class="card-img-top"
+                alt="Product"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Smartwatch Pro</h5>
+                <p class="card-text text-muted small">Theo dõi sức khỏe 24/7</p>
+                <div
+                  class="d-flex justify-content-between align-items-center mb-3"
+                >
+                  <span class="h6 mb-0 text-danger">1,299K</span>
+                  <div class="text-warning">
+                    <i class="bi bi-star-fill"></i> 5
+                  </div>
+                </div>
+                <button
+                  class="btn btn-primary btn-sm w-100"
+                  data-bs-toggle="modal"
+                  data-bs-target="#productModal"
+                >
+                  Xem nhanh
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card card-container shadow-sm h-100">
+              <img
+                src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=300&h=200&fit=crop"
+                class="card-img-top"
+                alt="Product"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Camera DSLR</h5>
+                <p class="card-text text-muted small">
+                  Chất lượng ảnh chuyên nghiệp
+                </p>
+                <div
+                  class="d-flex justify-content-between align-items-center mb-3"
+                >
+                  <span class="h6 mb-0"
+                    ><del class="text-muted">15,999K</del>
+                    <span class="text-danger">11,199K</span></span
+                  >
+                  <div class="text-warning">
+                    <i class="bi bi-star-fill"></i> 4.8
+                  </div>
+                </div>
+                <button
+                  class="btn btn-primary btn-sm w-100"
+                  data-bs-toggle="modal"
+                  data-bs-target="#productModal"
+                >
+                  Xem nhanh
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card card-container shadow-sm h-100">
+              <img
+                src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=300&h=200&fit=crop"
+                class="card-img-top"
+                alt="Product"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Smartwatch Pro</h5>
+                <p class="card-text text-muted small">Theo dõi sức khỏe 24/7</p>
+                <div
+                  class="d-flex justify-content-between align-items-center mb-3"
+                >
+                  <span class="h6 mb-0 text-danger">1,299K</span>
+                  <div class="text-warning">
+                    <i class="bi bi-star-fill"></i> 5
+                  </div>
+                </div>
+                <button
+                  class="btn btn-primary btn-sm w-100"
+                  data-bs-toggle="modal"
+                  data-bs-target="#productModal"
+                >
+                  Xem nhanh
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card card-container shadow-sm h-100">
+              <img
+                src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=300&h=200&fit=crop"
+                class="card-img-top"
+                alt="Product"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Smartwatch Pro</h5>
+                <p class="card-text text-muted small">Theo dõi sức khỏe 24/7</p>
+                <div
+                  class="d-flex justify-content-between align-items-center mb-3"
+                >
+                  <span class="h6 mb-0 text-danger">1,299K</span>
+                  <div class="text-warning">
+                    <i class="bi bi-star-fill"></i> 5
+                  </div>
+                </div>
+                <button
+                  class="btn btn-primary btn-sm w-100"
+                  data-bs-toggle="modal"
+                  data-bs-target="#productModal"
+                >
+                  Xem nhanh
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card card-container shadow-sm h-100">
+              <img
+                src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=300&h=200&fit=crop"
+                class="card-img-top"
+                alt="Product"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Smartwatch Pro</h5>
+                <p class="card-text text-muted small">Theo dõi sức khỏe 24/7</p>
+                <div
+                  class="d-flex justify-content-between align-items-center mb-3"
+                >
+                  <span class="h6 mb-0 text-danger">1,299K</span>
+                  <div class="text-warning">
+                    <i class="bi bi-star-fill"></i> 5
+                  </div>
+                </div>
+                <button
+                  class="btn btn-primary btn-sm w-100"
+                  data-bs-toggle="modal"
+                  data-bs-target="#productModal"
+                >
+                  Xem nhanh
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card card-container shadow-sm h-100">
+              <img
+                src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=300&h=200&fit=crop"
+                class="card-img-top"
+                alt="Product"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Smartwatch Pro</h5>
+                <p class="card-text text-muted small">Theo dõi sức khỏe 24/7</p>
+                <div
+                  class="d-flex justify-content-between align-items-center mb-3"
+                >
+                  <span class="h6 mb-0 text-danger">1,299K</span>
+                  <div class="text-warning">
+                    <i class="bi bi-star-fill"></i> 5
+                  </div>
+                </div>
+                <button
+                  class="btn btn-primary btn-sm w-100"
+                  data-bs-toggle="modal"
+                  data-bs-target="#productModal"
+                >
+                  Xem nhanh
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 4 -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card card-container shadow-sm h-100">
+              <img
+                src="https://images.unsplash.com/photo-1491841573634-28276674d425?w=300&h=200&fit=crop"
+                class="card-img-top"
+                alt="Product"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Tablet Ultra</h5>
+                <p class="card-text text-muted small">Màn hình lớn, mạnh mẽ</p>
+                <div
+                  class="d-flex justify-content-between align-items-center mb-3"
+                >
+                  <span class="h6 mb-0 text-danger">7,999K</span>
+                  <div class="text-warning">
+                    <i class="bi bi-star-fill"></i> 4.7
+                  </div>
+                </div>
+                <button
+                  class="btn btn-primary btn-sm w-100"
+                  data-bs-toggle="modal"
+                  data-bs-target="#productModal"
+                >
+                  Xem nhanh
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== MODAL ===== -->
+    <div class="modal fade" id="productModal" tabindex="-1">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Chi tiết sản phẩm</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <img
+                  src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=300&fit=crop"
+                  class="img-fluid rounded"
+                  alt="Product"
+                />
+              </div>
+              <div class="col-md-6">
+                <h4>Sản phẩm chính hãng</h4>
+                <p class="text-danger h5 mb-3">399K</p>
+                <p class="text-muted">
+                  Sản phẩm chất lượng cao, bảo hành 12 tháng, hỗ trợ khách hàng
+                  24/7.
+                </p>
+                <ul class="list-unstyled mb-3">
+                  <li>
+                    <i class="bi bi-check text-success me-2"></i>Hàng chính hãng
+                    100%
+                  </li>
+                  <li>
+                    <i class="bi bi-check text-success me-2"></i>Bảo hành 12
+                    tháng
+                  </li>
+                  <li>
+                    <i class="bi bi-check text-success me-2"></i>Miễn phí giao
+                    hàng
+                  </li>
+                </ul>
+                <div class="d-grid gap-2">
+                  <button class="btn btn-primary">Thêm vào giỏ</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="bg-dark text-light py-4">
+      <div class="container">
+        <div class="row g-3 mb-3">
+          <div class="col-12 col-md-6 col-lg-3">
+            <h6 class="fw-bold">Về TechStore</h6>
+            <p class="small text-muted">
+              Cung cấp sản phẩm công nghệ chất lượng cao.
+            </p>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <h6 class="fw-bold">Hỗ trợ</h6>
+            <ul class="list-unstyled small text-muted">
+              <li><a href="#" class="text-muted">Liên hệ</a></li>
+              <li><a href="#" class="text-muted">FAQ</a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <h6 class="fw-bold">Danh mục</h6>
+            <ul class="list-unstyled small text-muted">
+              <li><a href="#" class="text-muted">Điện thoại</a></li>
+              <li><a href="#" class="text-muted">Laptop</a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <h6 class="fw-bold">Liên hệ</h6>
+            <p class="small text-muted mb-0">
+              <i class="bi bi-telephone"></i> +84 123 456 789
+            </p>
+            <p class="small text-muted">
+              <i class="bi bi-envelope"></i> info@techstore.com
+            </p>
+          </div>
+        </div>
+        <hr class="bg-secondary" />
+        <p class="text-center text-muted small mb-0">
+          © 2024 TechStore. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
